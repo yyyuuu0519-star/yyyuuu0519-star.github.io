@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>線上候位｜海風餐廳</title>
+<link rel="stylesheet" href="waitlist.css">
+<script defer src="app.js"></script>
+</head>
+<body><main>
+<header><p id="restaurant"></p><h1>線上候位</h1><p id="mode"></p></header>
+<p id="message" role="status"></p>
+<section class="summary">目前候位 <strong id="count">—</strong> 組</section>
+<form class="card" id="join">
+<h2>登記候位</h2>
+<label>姓名<input name="name" maxlength="40" autocomplete="name" required></label>
+<label>性別<select name="gender" required><option value="">請選擇</option><option>男</option><option>女</option><option>不透露</option></select></label>
+<label>E-mail<input name="email" type="email" maxlength="160" autocomplete="email" required></label>
+<label>用餐人數<input name="party_size" type="number" min="1" max="20" value="2" required></label>
+<button type="submit">取得候位號碼</button>
+</form>
+<section class="card" id="ticket" hidden>
+<h2>你的候位號碼</h2><strong class="number" id="number"></strong>
+<p id="status"></p><p>前面還有 <strong id="ahead"></strong> 組 · 用餐 <strong id="party"></strong> 人</p>
+<small>每 5 秒更新。輪到時請留意 E-mail。</small>
+</section>
+</main></body></html>
