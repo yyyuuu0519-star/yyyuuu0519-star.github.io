@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>員工候位管理｜海風餐廳</title>
+<link rel="stylesheet" href="waitlist.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<main>
+<header><p id="restaurant"></p><h1>員工候位管理</h1><p id="mode"></p></header>
+<p id="message" role="status"></p>
+<form class="card" id="login">
+  <label>員工密碼<input id="password" type="password" required></label>
+  <button type="submit">登入</button>
+</form>
+<section class="card" id="dashboard" hidden>
+  <div class="bar"><h2>目前候位 <span id="count"></span> 組</h2><button id="logout">登出</button></div>
+  <p id="empty">目前沒有候位。</p>
+  <div class="table"><table><thead><tr><th>號碼</th><th>姓名</th><th>性別</th><th>E-mail</th><th>人數</th><th>狀態</th><th>登記時間</th><th>操作</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+</main>
+</body>
+</html>
